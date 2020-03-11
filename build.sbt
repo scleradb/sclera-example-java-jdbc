@@ -1,10 +1,10 @@
-name := "sclera-example-scala-jdbc"
+name := "sclera-example-java-jdbc"
 
-description := "Sclera JDBC Example and Template"
+description := "Sclera JDBC Example and Template - Java version"
 
 version := "4.0-SNAPSHOT"
 
-homepage := Some(url("https://github.com/scleradb/sclera-example-jdbc"))
+homepage := Some(url("https://github.com/scleradb/sclera-example-java-jdbc"))
 
 scalaVersion := "2.13.1"
 
