@@ -38,7 +38,7 @@ This is a minimal example, and does not include any Sclera plugins. If your exam
 
 ## Interface with Sclera using the JDBC API
 
-This application consists of a single source file, [JdbcExample.scala](src/main/scala/JdbcExample.scala).
+This application consists of a single source file, [`JdbcExample.java`](src/main/java/com/example/sclera/jdbc/JdbcExample.java).
 
 There are two procedures:
 
