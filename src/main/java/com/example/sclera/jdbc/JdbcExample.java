@@ -88,8 +88,6 @@ public class JdbcExample {
                     } finally {
                         rs.close();
                     }
-
-                    System.out.println();
                 }
             } finally {
                 stmt.close();
