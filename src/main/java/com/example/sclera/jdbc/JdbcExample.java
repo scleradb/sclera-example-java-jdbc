@@ -28,13 +28,14 @@ public class JdbcExample {
         // get a JDBC connection to Sclera
         Connection conn = DriverManager.getConnection(jdbcUrl, props);
 
-        // display warning, if any
-        SQLWarning warning = conn.getWarnings();
-        if( warning != null ) System.out.println(warning.getMessage());
-
-        // initialize the schema by executing the statement "create schema"
         try {
+            // display warning, if any
+            SQLWarning warning = conn.getWarnings();
+            if( warning != null ) System.out.println(warning.getMessage());
+
+            // initialize the schema by executing the statement "create schema"
             Statement stmt = conn.createStatement();
+
             try {
                 stmt.executeUpdate("create schema");
             } finally {
@@ -50,11 +51,11 @@ public class JdbcExample {
         // get a JDBC connection to Sclera
         Connection conn = DriverManager.getConnection(jdbcUrl);
 
-        // display warning, if any
-        SQLWarning warning = conn.getWarnings();
-        if( warning != null ) System.out.println(warning.getMessage());
-
         try {
+            // display warning, if any
+            SQLWarning warning = conn.getWarnings();
+            if( warning != null ) System.out.println(warning.getMessage());
+
             // create a statement to execute queries
             Statement stmt = conn.createStatement();
 
@@ -64,18 +65,18 @@ public class JdbcExample {
                     // execute query
                     ResultSet rs = stmt.executeQuery(query);
 
-                    // result metadata
-                    ResultSetMetaData metaData = rs.getMetaData();
-                    int n = metaData.getColumnCount();
-                    ArrayList<String> colNames = new ArrayList<String>();
-                    for( int i = 1; i <= n; i++ ) {
-                        colNames.add(metaData.getColumnLabel(i));
-                    }
-
-                    // display column names
-                    System.out.println(String.join(", ", colNames));
-
                     try {
+                        // result metadata
+                        ResultSetMetaData metaData = rs.getMetaData();
+                        int n = metaData.getColumnCount();
+                        ArrayList<String> colNames = new ArrayList<String>();
+                        for( int i = 1; i <= n; i++ ) {
+                            colNames.add(metaData.getColumnLabel(i));
+                        }
+
+                        // display column names
+                        System.out.println(String.join(", ", colNames));
+
                         // display each row in the result
                         while( rs.next() ) {
                             ArrayList<String> rowVals = new ArrayList<String>();
