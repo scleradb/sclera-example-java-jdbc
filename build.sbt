@@ -10,8 +10,6 @@ scalaVersion := "2.13.1"
 
 licenses := Seq("MIT License" -> url("https://opensource.org/licenses/MIT"))
 
-resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
-
 libraryDependencies ++= Seq(
     "com.scleradb" %% "sclera-config" % "4.0",
     "com.scleradb" %% "sclera-core" % "4.0",
