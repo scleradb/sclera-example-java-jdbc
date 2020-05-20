@@ -30,7 +30,7 @@ The required dependencies are added as:
 libraryDependencies ++= Seq(
     "com.scleradb" %% "sclera-config" % "4.0",
     "com.scleradb" %% "sclera-core" % "4.0",
-    "com.scleradb" %% "sclera-jdbc" % "4.0T"
+    "com.scleradb" %% "sclera-jdbc" % "4.0"
 )
 ```
 
